@@ -1,0 +1,38 @@
+.single-post {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  position: center;
+  
+}
+
+.single-post h1 {
+  font-size: 5rem;
+  color: #464646;
+  box-shadow: #7c7a7d;
+  
+}
+.single-post h2 {
+  font-size: 1rem;
+  color: #464646;
+  
+}
+
+.single-post p {
+  font-size: 18px;
+  color: #080808;  
+}
+
+.single-post__image {
+  
+  height: 30rem;
+  width: 50rem;
+  margin: 1rem auto;
+ 
+}
+
+@media (min-width: 100px) {
+  .single-post {
+    width: 113rem;
+  }
+}
