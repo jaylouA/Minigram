@@ -179,7 +179,7 @@ class Feed extends Component {
     if (this.state.editPost) {
       formData.append('oldPath', this.state.editPost.imagePath);
     }
-    fetch('https://finalbackend-minigram.onrender.com', {
+    fetch('https://finalbackend-minigram.onrender.com/post-image', {
       method: 'PUT',
       headers: {
         Authorization: 'Bearer ' + this.props.token
