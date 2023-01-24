@@ -49,7 +49,7 @@ class SinglePost extends Component {
         this.setState({
           title: resData.data.post.title,
           author: resData.data.post.creator.name,
-          image: 'https://finalbackend-minigram.onrender.com/graphql' + resData.data.post.imageUrl,
+          image: 'https://finalbackend-minigram.onrender.com/' + resData.data.post.imageUrl,
           date: new Date(resData.data.post.createdAt).toLocaleDateString('en-US'),
           content: resData.data.post.content
         });
