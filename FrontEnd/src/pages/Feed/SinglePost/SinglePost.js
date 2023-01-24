@@ -31,7 +31,7 @@ class SinglePost extends Component {
         postId: postId
       }
     };
-    fetch('https://finalbackend-minigram.onrender.com', {
+    fetch('https://finalbackend-minigram.onrender.com/graphql', {
       method: 'POST',
       headers: {
         Authorization: 'Bearer ' + this.props.token,
