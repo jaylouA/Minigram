@@ -1,25 +1,11 @@
+const cors = require('cors');
 const path = require('path');
 
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const multer = require('multer');
-const PORT = process.env.PORT || 8080;
-
-/*const storage = multer.diskStorage({
-  destination: (req, file, cb)=> 
-  {cb(null, 'images')
-  },
-
-  filename: (req, file, cb) => {
-    console.log(file)
-    cb(null, Date.now() + path.extname(file.originalname))
-  }
-})
-const upload = multer ({storage: storage})*/
-
 const graphqlHttp = require('express-graphql');
-
 const graphqlSchema = require('./graphql/schema');
 const graphqlResolver = require('./graphql/resolvers');
 const auth = require('./middleware/auth');
@@ -49,17 +35,9 @@ function fileFilter(req, file, cb) {
     }
 }
 
-/*app.get("/image", (req, res) => {
-  res.render("image");
-})
 
-app.post("/single", upload.single('image'), (req, 
-  res) => {
-  res.send("Single file upload success");
-})*/
-
-// app.use(bodyParser.urlencoded()); // x-www-form-urlencoded <form>
 app.use(bodyParser.json()); // application/json
+app.use(cors({ credentials: true, origin: 'https://minigramapp.onrender.com' }));
 app.use(
     multer({ storage: fileStorage, fileFilter: fileFilter }).single('image')
 );
