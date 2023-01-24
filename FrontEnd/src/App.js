@@ -73,7 +73,7 @@ class App extends Component {
       }
     };
     this.setState({ authLoading: true });
-    fetch('https://minigramapp.onrender.com', {
+    fetch('https://finalbackend-minigram.onrender.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -136,7 +136,7 @@ class App extends Component {
         password: authData.signupForm.password.value
       }
     };
-    fetch('https://minigramapp.onrender.com', {
+    fetch('https://finalbackend-minigram.onrender.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

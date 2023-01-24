@@ -31,7 +31,7 @@ class Feed extends Component {
         }
       `
     };
-    fetch('https://minigramapp.onrender.com', {
+    fetch('https://finalbackend-minigram.onrender.com', {
       method: 'POST',
       headers: {
         Authorization: 'Bearer ' + this.props.token,
@@ -88,7 +88,7 @@ class Feed extends Component {
         page: page
       }
     };
-    fetch('https://minigramapp.onrender.com', {
+    fetch('https://finalbackend-minigram.onrender.com', {
       method: 'POST',
       headers: {
         Authorization: 'Bearer ' + this.props.token,
@@ -131,7 +131,7 @@ class Feed extends Component {
         userStatus: this.state.status
       }
     };
-    fetch('https://minigramapp.onrender.com', {
+    fetch('https://finalbackend-minigram.onrender.com', {
       method: 'POST',
       headers: {
         Authorization: 'Bearer ' + this.props.token,
@@ -179,7 +179,7 @@ class Feed extends Component {
     if (this.state.editPost) {
       formData.append('oldPath', this.state.editPost.imagePath);
     }
-    fetch('https://minigramapp.onrender.com', {
+    fetch('https://finalbackend-minigram.onrender.com', {
       method: 'PUT',
       headers: {
         Authorization: 'Bearer ' + this.props.token
@@ -236,7 +236,7 @@ class Feed extends Component {
           };
         }
 
-        return fetch('https://minigramapp.onrender.com', {
+        return fetch('https://finalbackend-minigram.onrender.com', {
           method: 'POST',
           body: JSON.stringify(graphqlQuery),
           headers: {
@@ -317,7 +317,7 @@ class Feed extends Component {
         }
       `
     };
-    fetch('https://minigramapp.onrender.com', {
+    fetch('https://finalbackend-minigram.onrender.com', {
       method: 'POST',
       headers: {
         Authorization: 'Bearer ' + this.props.token,
